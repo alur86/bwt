@@ -14,9 +14,10 @@ class Country extends Model
  protected $table = 'countries';
 
 
-  public function company()
-    {
-        return $this->hasManyThrough('App\Company', 'App\User');
+  public function company(){
+
+      return $this->hasOne('App\Company');
+      
     }
 
 
